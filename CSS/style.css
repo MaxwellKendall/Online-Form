@@ -1,0 +1,148 @@
+/***************************
+****************************
+Base Elements
+****************************
+***************************/
+
+* {
+    font-family: 'Merriweather', serif;
+}
+
+#header-title {
+    margin: .05em;
+    margin-top: 0;
+    background-color: #191970;
+    color: white;
+    padding: .5em;
+    text-align: center;
+}
+
+hr {
+    display: block;
+    width: 100%;
+
+}
+
+h2 {
+    text-align: left;
+    margin: 0;
+}
+
+
+.beneath-header-container {
+    padding: .25em .5em 0em .5em;
+    margin: auto;
+    text-align: center;
+}
+
+.beneath-header-container p {
+    color: grey;
+}
+
+.no-border {
+    border: none;
+}
+
+.form {
+    display: block;
+    text-align: left;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+.form label {
+    color: grey;
+}
+
+
+input[type="text"]:nth-of-type(1n+1),
+select[name="State"] {
+    background: #f5f5f5;
+    padding: 1.5em 0em;
+    border-radius: .25em;
+    border: none;
+    display: block;
+    margin: 1.25em 0;
+    width: 100%;
+    outline: black;
+}
+
+.styled-select select {
+    height: 4em;
+}
+
+#name::-webkit-input-placeholder,
+#email::-webkit-input-placeholder {
+    text-align: right;
+    padding-right: .5em;
+    font-style: italic;
+    font-family: merriweather;
+}
+
+select:first-child {
+    color: darkgray;
+}
+
+input[type="text"]:focus,
+input[type="select"]:focus {
+/*how can I make the focus show a border that isnt blue?//*/
+}
+
+textarea {
+    background-color: #f5f5f5;
+    display: block;
+    width: 95%;
+    height: 5em;
+    border: none;
+}
+
+#submit {
+    display: block;
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    padding: .75em;
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: #5F9EA0;
+    color: white;
+    border-radius: .5em;
+    border: none;
+
+}
+
+footer {
+    text-align: center;
+    margin: auto;
+}
+
+#zipcode {
+    width: 30%;
+}
+
+/***************************
+****************************
+Desktop/tablet Viewport
+****************************
+***************************/
+
+@media (min-width: 760px) {
+
+    .container {
+        margin: auto;
+        width: 75%;
+    }
+
+    #zipcode {
+        width: 30%;
+}
+}
+
+/***************************
+****************************
+Questions for Mentorship session:
+
+ Why is it applying the normalize?
+****************************
+***************************/
