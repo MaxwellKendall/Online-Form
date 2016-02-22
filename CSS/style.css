@@ -97,7 +97,7 @@ textarea {
 }
 
 #submit {
-    display: block;
+    display: inline-block;
     width: 95%;
     text-align: center;
     margin: auto;
