@@ -9,7 +9,7 @@ Base Elements
 }
 
 #header-title {
-    margin: .05em;
+    margin: .25em 0;
     margin-top: 0;
     background-color: #191970;
     color: white;
@@ -25,7 +25,7 @@ hr {
 
 h2 {
     text-align: left;
-    margin: 0;
+    margin: .5em 0;
 }
 
 
@@ -119,6 +119,20 @@ footer {
 
 #zipcode {
     width: 30%;
+}
+
+.one {
+    border: none;
+    height: .30em;
+    background-color: black;
+    margin: .05em auto;
+}
+
+.two {
+    border: none;
+    height: .20em;
+    background-color: black;
+    margin: .1em auto;
 }
 
 /***************************
