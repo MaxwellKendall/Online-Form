@@ -54,6 +54,9 @@ h2 {
     color: grey;
 }
 
+input:focus {
+    border: solid 1px red;
+}
 
 input[type="text"]:nth-of-type(1n+1),
 select[name="State"] {
@@ -85,7 +88,14 @@ select:first-child {
 
 input[type="text"]:focus,
 input[type="select"]:focus {
-/*how can I make the focus show a border that isnt blue?//*/
+    border: .15em solid darkgray;
+}
+
+select:hover,
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
 }
 
 textarea {
