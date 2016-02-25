@@ -12,27 +12,27 @@
         <header>
             <h1 id="header-title">THE CODE REVIEW</h1>
         </header>
-        <div class="container">
         <div class="beneath-header-container">
         <h2 class="beneath-header-container">Sign Up for our Newsletter</h2>
         <p>Get the latest news on how your code is doing right in your inbox</p>
     </div> <!-- End of Beneath header container-->
-        <form action="example.hmtl" method="POST">
-            <div class="form">
-            <hr class="one">
-            <hr class="two">
-            <h2>Contact Information</h2>
-                <label>Full Name</label>
-                <input type="text" id="name" name="server_side" placeholder="Required">
-                <label>Email Address</label>
-                <input type="text" id="email" name="server_side" placeholder="Required">
-                <label>Phone Number</label>
-                <input type="text" id="xyz" name="server_side">
-                <label>Street Address</label>
-                <input type="text" id="xyz" name="server_side">
-                <label>City</label>
-                <input type="text" id="xyz" name="server_side">
-                <label>State</label>
+    <div class="container">
+    <hr class="one">
+    <hr class="two">
+        <form action="example.html" method="POST">
+            <fieldset id="contact">
+            <legend>Contact Information</legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Required">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Required">
+                <label for="number">Phone Number</label>
+                <input type="text" id="number" name="number">
+                <label for="address">Street Address</label>
+                <input type="text" id="address" name="address">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+                <label for="state">State</label>
                 <div class="styled-select">
                 <select id="state" name="State" placeholder="Choose State">
                         <option value="" selected id="grey">Choose State</option>
@@ -91,28 +91,29 @@
                 </div>
                 <label for="zipcode">Zip Code</label>
                 <input type="text" id="zipcode" name="server_side">
-            </form>
-            <form>
-                <hr class="two">
-                <h2>Newsletter</h2>
-                <h3>Select the newsletters you would like to receive</h3>
-                <input type="checkbox" id="xyz" name="server_side">
-                <label>HTML News</label><br>
-                <input type="checkbox" id="xyz" name="server_side">
-                <label>CSS News</label><br>
-                <input type="checkbox" id="xyz" name="server_side">
-                <label>Javascript News</label><br>
-                <h3>Newsletter format</h3>
-                <input type="radio" id="xyz" name="server_side">
-                <label>HTML</label><br>
-                <input type="radio" id="xyz" name="server_side">
-                <label>Plain Text</label><br>
-                <h3>Other topics you'd like to hear about</h3>
-                <textarea type="text" id="textarea" name="server_side"></textarea>
-                <input type="submit" value="Sign Up" id="submit" name="server_side">
+            </fieldset>
+            <hr class="one">
+            <fieldset id="newsletter">
+                <legend>Newsletter</legend>
+                <p>Select the newsletters you would like to receive</p>
+                <input type="checkbox" id="html" name="html">
+                <label for="html">HTML News</label><br>
+                <input type="checkbox" id="css" name="css">
+                <label for="css">CSS News</label><br>
+                <input type="checkbox" id="js" name="js">
+                <label for="js">Javascript News</label><br>
+                <p>Newsletter format</p>
+                <input type="radio" id="html2" name="html2">
+                <label for=""html2>HTML</label><br>
+                <input type="radio" id="plaintext" name="plaintext">
+                <label for="plaintext">Plain Text</label><br>
+                <p>Other topics you'd like to hear about</p>
+                <textarea type="text" id="textarea" name="textarea"></textarea>
+                <input type="submit" value="Sign Up" id="submit" name="submit">
             </div><!-- End of Form Div -->
             </fieldset>
         </form>
+    </div>
         <footer>
             <p>Copyright The Code Review</p>
         </footer>

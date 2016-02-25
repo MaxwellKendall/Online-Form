@@ -8,10 +8,38 @@ Base Elements
     font-family: 'Merriweather', serif;
 }
 
+#contact,
+#newsletter {
+    border: none;
+    margin-top: 2em;
+}
+
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+form {
+    width: 100%;
+}
+
+label,
+p {
+    color: #2d3944;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bolder;
+    color: #2d3944;
+}
+
 #header-title {
     margin: .25em 0;
     margin-top: 0;
-    background-color: #191970;
+    background-color: #2d3944;
     color: white;
     padding: .5em;
     text-align: center;
@@ -23,11 +51,11 @@ hr {
 
 }
 
-h2 {
-    text-align: left;
-    margin: .5em 0;
+legend {
+    font-size: 1.25em;
+    margin: .75em 0;
+    font-weight: bold;
 }
-
 
 .beneath-header-container {
     padding: .25em .5em 0em .5em;
@@ -43,17 +71,6 @@ h2 {
     border: none;
 }
 
-.form {
-    display: block;
-    text-align: left;
-    padding: 1em;
-    border-radius: .5em;
-}
-
-.form label {
-    color: grey;
-}
-
 input:focus {
     border: solid 1px red;
 }
@@ -61,17 +78,13 @@ input:focus {
 input[type="text"]:nth-of-type(1n+1),
 select[name="State"] {
     background: #f5f5f5;
-    padding: 1.5em 0em;
+    padding: 1.25em 0em;
     border-radius: .25em;
     border: none;
     display: block;
     margin: 1.25em 0;
     width: 100%;
     outline: black;
-}
-
-.styled-select select {
-    height: 4em;
 }
 
 #name::-webkit-input-placeholder,
@@ -82,15 +95,6 @@ select[name="State"] {
     font-family: merriweather;
 }
 
-select:first-child {
-    color: darkgray;
-}
-
-input[type="text"]:focus,
-input[type="select"]:focus {
-    border: .15em solid darkgray;
-}
-
 select:hover,
 input[type="submit"],
 input[type="radio"],
@@ -98,12 +102,35 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+input[type="text"]:focus,
+input[type="select"]:focus {
+    border: .15em solid darkgray;
+}
+
+select:first-child {
+    color: darkgray;
+}
+
+
+.styled-select select {
+    height: 4em;
+}
+
+
 textarea {
     background-color: #f5f5f5;
     display: block;
     width: 95%;
     height: 5em;
     border: none;
+}
+
+fieldset#newsletter input {
+    margin-right: .5em;
+}
+
+#zipcode {
+    width: 30%;
 }
 
 #submit {
@@ -127,9 +154,7 @@ footer {
     margin: auto;
 }
 
-#zipcode {
-    width: 30%;
-}
+
 
 .one {
     border: none;
@@ -140,7 +165,7 @@ footer {
 
 .two {
     border: none;
-    height: .20em;
+    height: .05em;
     background-color: black;
     margin: .1em auto;
 }
@@ -161,6 +186,21 @@ Desktop/tablet Viewport
     #zipcode {
         width: 30%;
 }
+
+    fieldset#contact label {
+        width: 30%;
+        float: left;
+        line-height: 5;
+
+    }
+
+    #contact input,
+    #contact select {
+        width: 70%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
 }
 
 /***************************
