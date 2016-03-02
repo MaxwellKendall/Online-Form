@@ -28,7 +28,7 @@ Base Elements
 }
 
 .beneath-header-container p {
-    color: #708090;
+    color: grey;
 }
 
 h2 {
@@ -67,12 +67,13 @@ hr {
     width: 95%;
 }
 
-/* Container for Form */
+/* Form Section */
 
 #contact,
 #newsletter {
     border: none;
     width: 95%;
+    margin: auto;
 }
 
 legend {
@@ -88,7 +89,7 @@ label {
     /*margin-left: .5em;*/
 }
 
-input[type="text"],
+input[type="text"]:nth-of-type(1n+1),
 input[type="email"],
 input[type="tel"],
 select[name="State"] {
@@ -110,7 +111,6 @@ select[name="State"] {
     font-family: merriweather;
 }
 
-
 select:hover,
 input[type="submit"],
 input[type="radio"],
@@ -118,31 +118,29 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
+input:focus,
 input[type="select"]:focus {
-    border: .15em solid #708090;
+    border: .15em solid darkgray;
     text-indent: 1em;
     transition: background-color 0.5s ease;
-    background-color: #708090;
+    background-color: whitesmoke
 }
 
-#textarea:focus {
+textarea:focus {
     outline: none;
-    border: .15em solid #708090;
+    border: .15em solid red;
     transition: background-color 0.5s ease;
-    background-color: #708090;
+    background-color: darkgray;
 }
 
 select:first-child {
-    color: #708090;
+    color: darkgray;
 }
 
 
 .styled-select select {
     height: 4em;
-    /*background-image: url(../32195.png);*/
+    background-image: url(../32195.png);
 
 }
 
@@ -153,8 +151,8 @@ select:first-child {
     width: 100%;
     height: 5em;
     border: none;
-    border-radius: .5em;
-
+    border-radius: 10px;
+    margin: auto;
 }
 
 #zipcode {
@@ -226,9 +224,8 @@ Desktop/tablet Viewport
         width: 30%;
     }
 
-    fieldset#newsletter textarea {
+    fieldset#newsletter textarea[type="text"] {
         width: 100%;
-        border-radius: .5em;
         padding: 0;
     }
 
