@@ -89,7 +89,7 @@ label {
     /*margin-left: .5em;*/
 }
 
-.why {
+label.why {
   display: inline-block;
   padding: 0.5em 0;
 }
