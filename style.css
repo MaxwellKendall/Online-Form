@@ -89,6 +89,11 @@ label {
     /*margin-left: .5em;*/
 }
 
+.why {
+  display: inline-block;
+  padding: 0.5em 0;
+}
+
 input[type="text"]:nth-of-type(1n+1),
 input[type="email"],
 input[type="tel"],
@@ -118,19 +123,12 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-input:focus,
-input[type="select"]:focus {
-    border: .15em solid darkgray;
-    text-indent: 1em;
-    transition: background-color 0.5s ease;
-    background-color: whitesmoke
-}
-
-textarea:focus {
+#textarea:focus {
     outline: none;
     border: .15em solid red;
     transition: background-color 0.5s ease;
     background-color: darkgray;
+    text-indent: 15em;
 }
 
 select:first-child {
@@ -144,7 +142,6 @@ select:first-child {
 
 }
 
-
 #textarea {
     background-color: #f5f5f5;
     display: block;
@@ -153,6 +150,7 @@ select:first-child {
     border: none;
     border-radius: 10px;
     margin: auto;
+    text-indent: inherit;
 }
 
 #zipcode {
@@ -232,6 +230,7 @@ Desktop/tablet Viewport
     #submit {
         width: 100%;
     }
+
 
 }
 
