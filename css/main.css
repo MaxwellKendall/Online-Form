@@ -4,49 +4,14 @@ Mobile Device Viewport
 ****************************
 ***************************/
 
-/*Header*/
 
-
-h1 {
-    font-family: 'Permanent Marker', sans-serif;
-    text-align: center;
-}
-
-/*Navigation Bar*/
-
-.main-nav {
-    font-family: 'Bangers', sans-serif;
-    display: block;
-    text-align: center;
-    margin: auto;
-}
-
-.selected {
-    color: purple;
-}
-
-.main-nav a {
-    cursor: pointer;
-    padding: 1em;
-    text-decoration: none;
-}
-
-.main-nav a:hover {
-    color: purple;
-}
-/*Container*/
-
-.document-container {
-    margin: auto;
-    width: 50%;
-    background-color:
-}
 /*Search*/
 
 .search-label {
     text-align: center;
     display: block;
     margin: auto;
+    padding-bottom: .5em;
 }
 
 
@@ -56,6 +21,16 @@ h1 {
     width: 460px;
     margin: auto;
 }
+
+
+/*Container*/
+
+.document-container {
+    margin: auto;
+    width: 50%;
+    background-color:
+}
+
 /*Actual Image Content*/
 
 span {
@@ -75,7 +50,6 @@ li {
 
 /*Overlay Content*/
 
-
 #overlay {
     position: fixed;
     text-align: center;
@@ -90,11 +64,25 @@ li {
 #overlay img {
   margin-top: 10%;
   max-width: 50%;
+  position: relative;
 }
 
 #overlay p {
 	color: white;
 }
+
+#arrowRight {
+    float: right;
+    color: white;
+
+}
+
+#arrowLeft {
+    float: left;
+    color: white;
+
+}
+
 
 /*footer*/
 

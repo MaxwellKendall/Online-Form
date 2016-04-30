@@ -3,13 +3,20 @@
 
 var $image = $('<img>');
 var $overlay = $('<div id="overlay"></div>');
-var $exit = $('<button id="exit"> x </button>');
+var $exit = $('<div id="exit"> x </div>');
 var $caption = $("<p></p>");
 var $imageArray = $(".images li");
-var $arrowLeft= $('<button id="arrowLeft"> < </button>');
-var $arrowRight = $('<button id="arrowRight"> > </button>');
+var $arrowLeft= $('<div id="arrowLeft"> < </div>');
+var $arrowRight = $('<div id="arrowRight"> > </div>');
 var $currentImage;
-var $index;
+
+//sticky header
+
+$(".header").sticky({
+  getWidthFrom: 'body',
+  responsiveWidth: true
+});
+
 
 //Adding the Dynamically Created Overlay Element
 
@@ -32,23 +39,23 @@ $exit.click(function() {
 
 $("#search").keyup(function(){
     // a. Go through the images
-    $(".images a").each(function(images){
+    $(".images li a").each(function(images){
         // b. Remove the class from previous searches
         if ($(this).hasClass("hide")){
             $(this).removeClass("hide");
         }
         // c. Access the Captions of all Pictures
-        var captionLibrary = $(this).children('img').attr("alt");
+        var $captionLibrary = $(this).children('img').attr("alt");
             // - convert them to lower case for uniformity
-        captionLibrary = $captionLibrary.toLowerCase();
+        $captionLibrary = $captionLibrary.toLowerCase();
         // d. Access the input of user in the search bar
-        var search = $('#search').val();
+        var $search = $('#search').val();
         // - convert value to lower case for uniformity
-        search = $search.toLowerCase();
+        $search = $search.toLowerCase();
         // e. Compare the caption library to the search
             //- literally, if the search variable is not equal to the index contained in
             //the other variable, then add the class to hide the element
-        if ($captionLibrary.indexOf(search) === -1){
+        if ($captionLibrary.indexOf($search) === -1){
             $(this).addClass("hide");
         }
 });// this is the end of the each loop
@@ -95,18 +102,83 @@ $(".images li").click(function (event) {
         var nextImage = "img/";
         nextImage += $($currentImage).next().children("a").attr("href").substr(15);
         $image = $($image).attr("src", nextImage);
-        //if ($currentImage = imageArray[0]){
-        //    nextImage += $($currentImage[imageArray.length]).children("a").attr("href").substr(15);
-
-        //}
         $currentImage = $($currentImage).next();
         $($currentImage).addClass("current");
+        var captionText = $($currentImage).children("a").children("img").attr("alt");
+        $caption.text(captionText);
+        debugger;    });
+
+        $("#arrowLeft").click(function() {
+            if ($currentImage == $imageArray[0]){
+            console.log("yess!!!");
+            /*
+            var lastImage = $($imageArray).length;
+            lastImage += - 1;
+            var goToLast = "img/";
+            goToLast += $($imageArray[lastImage]).children("a").attr("href").substr(15);
+            $image = $($image).attr("src", goToLast);
+            $currentImage = $imageArray[lastImage];
+            $($currentImage).addClass("current");
+            var captionText = $($currentImage).children("a").children("img").attr("alt");
+            $caption.text(captionText);
+            */
+        } else if ($currentImage != $imageArray[0]){
+            var previousImage = "img/";
+            previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
+            $image = $($image).attr("src", previousImage);
+            $currentImage = $($currentImage).prev();
+            $($currentImage).addClass("current");
+            var captionText = $($currentImage).children("a").children("img").attr("alt");
+            $caption.text(captionText);
+            }
+        });
+
+        /*
+            var goToLastImage = $($imageArray[lastImage]).children("a").attr("href").substr(15);
+            $image = $($image).attr("src", goToLastImage);
+            $currentImage = $imageArray[lastImage];
+            $($currentImage).addClass("current");
+            } else {
+            var previousImage = "img/";
+            previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
+            $image = $($image).attr("src", previousImage);
+            $currentImage = $($currentImage).prev();
+            $($currentImage).addClass("current");
+                }
             });
 
-  $("#arrowLeft").click(function() {
-        var previousImage = "img/";
-        previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
-        $image = $($image).attr("src", previousImage);
-        $currentImage = $($currentImage).prev();
-        $($currentImage).addClass("current");
-        });
+      */
+
+      /*
+
+      $("#arrowLeft").click(function() {
+          var previousImage = "img/";
+               previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
+               $image = $($image).attr("src", previousImage);
+               $currentImage = $($currentImage).prev();
+               $($currentImage).addClass("current");
+       });
+
+One problem I have with this code is when you are on the first image and hit previous, it does not go to the last image; conversly the same, if you are on the last image and hit next, it will not go to the first image. Here is the code I tried to make it do this for the event when the user hits the previous button on the first image:
+
+the problem is that when i define last image, the return value is 12
+when you input that into thbe array selector, it treats the value as undefined; 12 is apparently the wrong length for this array.
+
+$("#arrowLeft").click(function() {
+    //var lastImage = $($imageArray).length
+    //lastImage += - 1;
+    if ($currentImage === $imageArray[0]){
+    console.log("yess!!!");
+    var goToLastImage = $($imageArray[lastImage]).children("a").attr("href").substr(15);
+    $image = $($image).attr("src", goToLastImage);
+    $currentImage = $imageArray[lastImage];
+    $($currentImage).addClass("current");
+    } else {
+    var previousImage = "img/";
+    previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
+    $image = $($image).attr("src", previousImage);
+    $currentImage = $($currentImage).prev();
+    $($currentImage).addClass("current");
+        }
+    });
+        */

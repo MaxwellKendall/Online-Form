@@ -3,23 +3,17 @@
     <head>
         <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <title>Claire Kendall Art</title>
     </head>
     <body>
-    <header class="header-container"><!--Header-->
-        <h1>Claire Kendall Art</h1>
-            <nav class="main-nav"><!--Menu-->
-                <a href="index.html" class="selected">Home</a>
-                <h4><a href="contact.html">Contact</a>
-                <h4><a href="portfolio.html">Portfolio</a>
-                <h4><a href="about.html">About</a>
-            </nav><!--///Menu///-->
-    </header><!--///Header///-->
-    <div class="document-container"><!--Main Container for Body Content-->
+        <header class="header">
             <label class="search-label">Search</label>
             <input id="search" type="text">
-            <ul class="images"><!--Images-->
+        </header>
+        <div class="document-container"><!--Main Container for Body Content-->
+            <ul class=" clearfix images"><!--Images-->
             <li><a href="img/thumbnails/01.jpg"><img src="img/01.jpg" alt="Hay Bales I love hay bales. Took this snap on a drive through the countryside past some straw fields."></img></a></li>
             <li><a href="img/thumbnails/02.jpg"><img src="img/02.jpg" alt="The lake was so calm today. We had a great view of the snow on the mountains from here."></img></a></li>
             <li><a href="img/thumbnails/03.jpg"><img src="img/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below."></img></a></li>
@@ -39,6 +33,7 @@
     </footer>
     </div><!--///Main Container for Body Content///-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="sticky.js"></script>
     <script src="main.js"></script>
     </body>
 </html>
