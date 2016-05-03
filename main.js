@@ -1,4 +1,3 @@
-
 //Global Variables
 
 var $image = $('<img>');
@@ -9,13 +8,6 @@ var $imageArray = $(".images li");
 var $arrowLeft= $('<div id="arrowLeft"> < </div>');
 var $arrowRight = $('<div id="arrowRight"> > </div>');
 var $currentImage;
-
-//sticky header
-
-$(".header").sticky({
-  getWidthFrom: 'body',
-  responsiveWidth: true
-});
 
 
 //Adding the Dynamically Created Overlay Element
@@ -64,7 +56,7 @@ $("#search").keyup(function(){
 // 2. Dynamically Creating the Light Box
 
     // a. When <li> element is clicked:
-$(".images li").click(function (event) {
+$(".images a").click(function (event) {
 
 // 2.1 Remove the dynmaically added class
     // a. Cycle through each image element
@@ -77,7 +69,7 @@ $(".images li").click(function (event) {
 // Creating the Light Box Cont'd:
 
     // b. Get the descendent "img" element from the selected <li> element
-    $currentImage = $(this);
+    $currentImage = $(this).parent();
     // c. Add the class "current"
     $currentImage.addClass("current");
     // d. Prevent default click event behavior
@@ -85,10 +77,10 @@ $(".images li").click(function (event) {
 
     // e. Getting Location of bigger picture
     var imageLocation = "img/";
-    imageLocation += $(this).children("a").attr("href").substr(15);
+    imageLocation += $(this).attr("href").substr(15);
     $($image).attr("src", imageLocation);
     // f. Getting Caption Text
-    var captionText = $(this).children("a").children("img").attr("alt");
+    var captionText = $(this).children("img").attr("alt");
     $caption.text(captionText);
     // g. Show Overlay
     $overlay.show();
@@ -106,7 +98,7 @@ $(".images li").click(function (event) {
         $($currentImage).addClass("current");
         var captionText = $($currentImage).children("a").children("img").attr("alt");
         $caption.text(captionText);
-        debugger;    });
+    });
 
         $("#arrowLeft").click(function() {
             if ($currentImage == $imageArray[0]){
@@ -146,11 +138,9 @@ $(".images li").click(function (event) {
             $($currentImage).addClass("current");
                 }
             });
-
       */
 
       /*
-
       $("#arrowLeft").click(function() {
           var previousImage = "img/";
                previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
@@ -158,12 +148,9 @@ $(".images li").click(function (event) {
                $currentImage = $($currentImage).prev();
                $($currentImage).addClass("current");
        });
-
 One problem I have with this code is when you are on the first image and hit previous, it does not go to the last image; conversly the same, if you are on the last image and hit next, it will not go to the first image. Here is the code I tried to make it do this for the event when the user hits the previous button on the first image:
-
 the problem is that when i define last image, the return value is 12
 when you input that into thbe array selector, it treats the value as undefined; 12 is apparently the wrong length for this array.
-
 $("#arrowLeft").click(function() {
     //var lastImage = $($imageArray).length
     //lastImage += - 1;

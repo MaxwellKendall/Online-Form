@@ -5,49 +5,62 @@ Mobile Device Viewport
 ***************************/
 
 
+
 /*Search*/
 
-.search-label {
-    text-align: center;
-    display: block;
-    margin: auto;
-    padding-bottom: .5em;
-}
 
+header {
+    text-align: center;
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1em 0 1em 0;
+}
 
 #search {
-    display: block;
-    height: 30px;
-    width: 460px;
+    text-align: left;
     margin: auto;
 }
 
+#search::-webkit-input-placeholder {
+    text-align: right;
+    padding-right: .5em;
+}
 
-/*Container*/
+
+/*Containers*/
+
+.images {
+    padding-left: 0;
+}
+
 
 .document-container {
+    padding-top: 2.75em;
     margin: auto;
-    width: 50%;
-    background-color:
+    text-align: center;
+    width: 75%;
 }
 
 /*Actual Image Content*/
 
-span {
-    display: none;
-    text-align: center;
-}
-
 li {
     list-style-type: none;
-    display: inline;
-    width: 0%;
 }
 
 .hide {
     display: none;
 }
 
+img {
+    width: 75%;
+    padding: .5em;
+    margin: auto;
+    text-align: center;
+}
 /*Overlay Content*/
 
 #overlay {
@@ -59,11 +72,12 @@ li {
     top: 0;
     bottom: 0;
     display: none;
+    z-index: 2;
 }
 
 #overlay img {
-  margin-top: 10%;
-  max-width: 50%;
+  margin-top: 3em%;
+  width: 50%;
   position: relative;
 }
 
@@ -74,15 +88,32 @@ li {
 #arrowRight {
     float: right;
     color: white;
-
+    font-size: 5em;
+    cursor: pointer;
+    position: relative;
+    bottom: 25%;
+    right: 10%;
 }
 
 #arrowLeft {
     float: left;
     color: white;
+    font-size: 5em;
+    cursor: pointer;
+    position: relative;
+    left: 10%;
+    bottom: 25%;
 
 }
 
+#exit {
+    font-size: 5em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 40%;
+}
 
 /*footer*/
 
@@ -91,40 +122,77 @@ footer {
     text-align: center;
 }
 
-/***************************
-****************************
-Tablet Viewport
-****************************
-***************************/
+/******************
+next width
+******************/
 
-@media (min-width: 768px){
+@media (min-width: 550px){
 
-    .document-container {
-        width: 85%;
-        max-width: 980px;
-    }
+/*Containers*/
 
-    .images img {
-        display: inline;
-        padding: 1.25em;
-        max-width: 20%;
-        display: inline;
-    }
-
-
+.images li {
+    padding-left: 0;
+    width: 20%;
+    display: inline;
 }
 
-/***************************
-****************************
-Desktopt Viewport
-****************************
-***************************/
+.document-container {
+    padding-top: 2.75em;
+    margin: auto;
+    text-align: center;
+    width: 85%;
+    max-width: 980px;
+}
 
-@media (min-width: 1024px) {
 
-    .document-container {
-        width: 95%;
-        max-width: 980px;
 
-    }
+/*Image*/
+
+img {
+    width: 20%;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+#overlay img {
+    width: 75%;
+}
+}
+/******************
+next width
+******************/
+
+@media (min-width: 880px){
+
+/*Containers*/
+
+.images li {
+    padding-left: 0;
+    width: 30%;
+    display: inline;
+}
+
+
+.document-container {
+    padding-top: 2.75em;
+    margin: auto;
+    text-align: center;
+    width: 95%;
+    max-width: 980px;
+}
+
+/*Image*/
+
+img {
+    width: 20%;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+#overlay img {
+    width: 65%;
+}
+
 }
