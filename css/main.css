@@ -76,9 +76,9 @@ img {
 }
 
 #overlay img {
-  margin-top: 3em%;
-  width: 50%;
-  position: relative;
+  margin-top: 3em;
+  width: 65%;
+  vertical-align: middle;
 }
 
 #overlay p {
@@ -88,31 +88,31 @@ img {
 #arrowRight {
     float: right;
     color: white;
-    font-size: 5em;
+    font-size: 1.5em;
     cursor: pointer;
-    position: relative;
-    bottom: 25%;
+    position: absolute;
+    bottom: 50%;
     right: 10%;
 }
 
 #arrowLeft {
     float: left;
     color: white;
-    font-size: 5em;
+    font-size: 1.5em;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     left: 10%;
-    bottom: 25%;
+    bottom: 50%;
 
 }
 
 #exit {
-    font-size: 5em;
+    font-size: 1.5em;
     color: white;
     cursor: pointer;
-    position: relative;
-    top: 0;
-    left: 40%;
+    position: absolute;
+    top: 5%;
+    right: 15%;
 }
 
 /*footer*/
@@ -158,6 +158,42 @@ img {
 #overlay img {
     width: 75%;
 }
+
+
+#overlay p {
+	color: white;
+}
+
+#arrowRight {
+    float: right;
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    right: 10%;
+}
+
+#arrowLeft {
+    float: left;
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+    bottom: 50%;
+
+}
+
+#exit {
+    font-size: 2.5em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+}
+
 }
 /******************
 next width
@@ -195,4 +231,37 @@ img {
     width: 65%;
 }
 
+#overlay p {
+	color: white;
+}
+
+#arrowRight {
+    float: right;
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    right: 10%;
+}
+
+#arrowLeft {
+    float: left;
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+    bottom: 50%;
+
+}
+
+#exit {
+    font-size: 2.5em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+}
 }
