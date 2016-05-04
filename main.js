@@ -91,19 +91,33 @@ $(".images a").click(function (event) {
     // a. When the right arrow is clicked:
 
   $("#arrowRight").click(function() {
-        var nextImage = "img/";
-        nextImage += $($currentImage).next().children("a").attr("href").substr(15);
-        $image = $($image).attr("src", nextImage);
-        $currentImage = $($currentImage).next();
-        $($currentImage).addClass("current");
-        var captionText = $($currentImage).children("a").children("img").attr("alt");
-        $caption.text(captionText);
+              var x = $imageArray.length;
+              if ($currentImage == $imageArray[x]){
+              console.log("yess!!!");
+              var firstImage = $($imageArray[0]);
+              var goToFirst = "img/";
+              goTofirst += $($imageArray[firstImage]).children("a").attr("href").substr(15);
+              $image = $($image).attr("src", goToFirst);
+              $currentImage = $imageArray[firstImage];
+              $($currentImage).addClass("current");
+              var captionText = $($currentImage).children("a").children("img").attr("alt");
+              $caption.text(captionText);
+  } else if ($currentImage != $imageArray[x]){
+            console.log('no');
+              var nextImage = "img/";
+              nextImage += $($currentImage).next().children("a").attr("href").substr(15);
+              $image = $($image).attr("src", nextImage);
+              $currentImage = $($currentImage).next();
+              $($currentImage).addClass("current");
+              var captionText = $($currentImage).children("a").children("img").attr("alt");
+              $caption.text(captionText);
+      }
+
     });
 
         $("#arrowLeft").click(function() {
             if ($currentImage == $imageArray[0]){
             console.log("yess!!!");
-            /*
             var lastImage = $($imageArray).length;
             lastImage += - 1;
             var goToLast = "img/";
@@ -113,8 +127,8 @@ $(".images a").click(function (event) {
             $($currentImage).addClass("current");
             var captionText = $($currentImage).children("a").children("img").attr("alt");
             $caption.text(captionText);
-            */
         } else if ($currentImage != $imageArray[0]){
+            console.log('no');
             var previousImage = "img/";
             previousImage += $($currentImage).prev().children("a").attr("href").substr(15);
             $image = $($image).attr("src", previousImage);
