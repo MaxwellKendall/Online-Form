@@ -92,17 +92,19 @@ $(".images a").click(function (event) {
 
   $("#arrowRight").click(function() {
               var x = $imageArray.length;
-              if ($currentImage == $imageArray[x]){
+              x += - 1;
+              $($imageArray[x]).addClass("last");
+              if ($($currentImage).hasClass("last")){
               console.log("yess!!!");
-              var firstImage = $($imageArray[0]);
               var goToFirst = "img/";
-              goTofirst += $($imageArray[firstImage]).children("a").attr("href").substr(15);
+              goToFirst += $($imageArray[0]).children("a").attr("href").substr(15);
               $image = $($image).attr("src", goToFirst);
-              $currentImage = $imageArray[firstImage];
+              $currentImage = $imageArray[0];
               $($currentImage).addClass("current");
               var captionText = $($currentImage).children("a").children("img").attr("alt");
               $caption.text(captionText);
-  } else if ($currentImage != $imageArray[x]){
+              debugger;
+  } else {
             console.log('no');
               var nextImage = "img/";
               nextImage += $($currentImage).next().children("a").attr("href").substr(15);
@@ -111,12 +113,12 @@ $(".images a").click(function (event) {
               $($currentImage).addClass("current");
               var captionText = $($currentImage).children("a").children("img").attr("alt");
               $caption.text(captionText);
+              debugger;
       }
-
     });
-
         $("#arrowLeft").click(function() {
-            if ($currentImage == $imageArray[0]){
+            $($imageArray[0]).addClass("first");
+            if ($($currentImage).hasClass("first")){
             console.log("yess!!!");
             var lastImage = $($imageArray).length;
             lastImage += - 1;
