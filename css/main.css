@@ -1,3 +1,32 @@
+/******************
+
+Problem:
+
+The design of the overlay:
+
+Arrows do not respond the way we would like:
+(1) They don't work in responsive setting
+(2) We are using absolute positioning, doesn't work the best?
+
+Solution:
+
+Maybe add a div container to serve as the "nearest ancestor" for the arrows
+currently set as "absolute"
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/position
+http://www.barelyfitz.com/screencast/html-training/css/positioning/
+https://css-tricks.com/almanac/properties/p/position/
+https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/
+
+******************/
+
+
+
+
+
+
+
+
 /***************************
 ****************************
 Mobile Device Viewport
